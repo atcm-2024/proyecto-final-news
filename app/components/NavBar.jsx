@@ -146,12 +146,10 @@ export default function NavBar({ busqueda }) {
                      </li>
                   ))}
                </ul> )}
-            </div>
-
-           
+            </div>   
 
          </div>
-         <div className="h-[30%] md:mb-0 md:h-full md:w-[45%] bg-slate-900 w-full flex md:flex-row justify-center items-center">
+         <div className="h-[22%] md:mb-0 md:h-full md:w-[45%] bg-slate-900 w-full flex md:flex-row justify-center items-center">
             <label
                className="mr-3 text-[12px] font-bold md:text-[14px] ml-2 md:ml-0 text-white"
                htmlFor=""

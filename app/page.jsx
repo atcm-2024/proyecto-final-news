@@ -1,7 +1,6 @@
 'use client'
 import NavBar from "@/app/components/NavBar"
 import Principal from "@/app/princial/page"
-import Article from "@/app/components/article"
 import Footer from "@/app/components/Footer"
 import useData from "@/app/customhooks/useData"
 import { useState } from "react"
@@ -89,13 +88,6 @@ export default function Home() {
        <Principal 
         openModal={toggleModal}
          data={data}/>
-        {/*open &&
-            <Article 
-              open={open}
-              closeModal={toggleModal}
-              data={data}
-              />
-        */}
       <Footer />
     </div>
 

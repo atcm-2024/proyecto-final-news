@@ -1,29 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 export default function Article({ open, closeModal, data, position }) {
   if (!data) return null;
 
   const { title, description, urlToImage, source, idArticle } = data;
 
-  // Verificar si urlToImage es válido (ni '[Removed]' ni null)
   let urlAlterna = "/gestion-de-negocios.jpg"; // Imagen por defecto
   if (urlToImage && urlToImage !== '[Removed]') {
     urlAlterna = urlToImage;
   }
 
-  // Referencia del modal para calcular su posición
-  /*const [modalPosition, setModalPosition] = useState({ top: 210, left: 270 });
-
-  // Calculamos la posición del modal con respecto al artículo donde se hizo click
-  useEffect(() => {
-    if (position) {
-      const { top, left } = position;
-      setModalPosition({
-        top: top + window.scrollY, // Para tener en cuenta el desplazamiento de la página
-        left: left,
-      });
-    }
-  }, [position]);*/
+  
 
   return (
     <div
@@ -32,7 +19,7 @@ export default function Article({ open, closeModal, data, position }) {
     >
       <div
         className="bg-white p-5 rounded-xl text-sm w-full h-[70] overflow-y-auto text-sky-900 flex  flex-col justify-center items-start "
-        onClick={(e) => e.stopPropagation()} // Evita que el clic en el modal cierre el modal
+        onClick={(e) => e.stopPropagation()} 
       >
         <span
           className="text-3xl text-gray-500 cursor-pointer absolute top-2 right-2"
